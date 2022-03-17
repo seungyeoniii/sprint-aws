@@ -4,9 +4,7 @@ module.exports = {
 
   authToken: function (req, res, next) {
     const header = req.headers.authorization;
-
     const accessToken = header.split(' ')[1];
-
     if (accessToken === 'null') {
       res.status(401).send('Not Authorized');
     } else {
